@@ -23,12 +23,12 @@ watch.createMonitor('../hexo-blog', {
   monitor.on("changed", function (f, curr, prev) {
     // Handle file changes
     logger.info('file changed', f)
-    build()
+    sync()
   })
   monitor.on("removed", function (f, stat) {
     // Handle removed files
     logger.info('file removed ', f)
-    build()
+    sync()
   })
 })
 
